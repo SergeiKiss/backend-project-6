@@ -13,6 +13,15 @@ export default (app) => {
       const user = new app.objection.models.user();
       reply.render('users/new', { user });
     })
+    .get('/users/:id/edit', (req, reply) => {
+
+    })
+    .get('/session/new', (req, reply) => {
+
+    })
+    .post('/session', (req, reply) => {
+
+    })
     .post('/users', async (req, reply) => {
       const user = new app.objection.models.user();
       user.$set(req.body.data);
@@ -28,5 +37,14 @@ export default (app) => {
       }
 
       return reply;
+    })
+    .patch('/users/:id', (req, reply) => {
+
+    })
+    .delete('/users/:id', (req, reply) => {
+
+    })
+    .delete('/session', (req, reply) => {
+
     });
 };
